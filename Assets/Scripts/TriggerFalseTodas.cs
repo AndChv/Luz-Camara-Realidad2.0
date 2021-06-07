@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Regresa : MonoBehaviour
+public class TriggerFalseTodas : MonoBehaviour
 {
     public GameObject jugador;
     public GameObject pared1;
@@ -29,19 +29,19 @@ public class Regresa : MonoBehaviour
         colliderPared5 = pared5.GetComponent<Collider>();
         colliderPared6 = pared6.GetComponent<Collider>();
     }
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit (Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("entra");
-            colliderPared1.isTrigger = true;
-            colliderPared2.isTrigger = true;
-            colliderPared3.isTrigger = true;
-            colliderPared4.isTrigger = true;
-            colliderPared5.isTrigger = true;
-            colliderPared6.isTrigger = true;
+            Debug.Log("Salio");
+            colliderPared1.isTrigger = false;
+            colliderPared2.isTrigger = false;
+            colliderPared3.isTrigger = false;
+            colliderPared4.isTrigger = false;
+            colliderPared5.isTrigger = false;
+            colliderPared6.isTrigger = false;
 
-            controlJugador.Move(new Vector3(58, 0, 0));
+            
         }
     }
 

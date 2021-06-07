@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 56256028}
   - component: {fileID: 56256027}
   - component: {fileID: 56256026}
+  - component: {fileID: 56256030}
   m_Layer: 0
   m_Name: muro con poster 4
   m_TagString: Untagged
@@ -148,7 +149,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56256025}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -215,6 +216,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &56256030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56256025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb3c4b7dc5045e4899953279beb2589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &126054686
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,13 +332,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.83
+      value: 58
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -333,23 +350,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.87
+      value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7204129
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.012373963
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.69331133
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.01309959
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -357,11 +374,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8200000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
@@ -377,6 +398,7 @@ GameObject:
   - component: {fileID: 383658934}
   - component: {fileID: 383658933}
   - component: {fileID: 383658932}
+  - component: {fileID: 383658936}
   m_Layer: 0
   m_Name: poster Lena
   m_TagString: Untagged
@@ -452,12 +474,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383658931}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.04117646, z: 0.0040816288}
+  m_LocalPosition: {x: 0.59, y: 0.04117646, z: 0.0040816288}
   m_LocalScale: {x: 0.2, y: 0.88235295, z: 0.40816325}
   m_Children: []
   m_Father: {fileID: 1159017139}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383658936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383658931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60cb26e460ef854ea0e71d566e71672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 885536717}
+  pared: {fileID: 1159017135}
 --- !u!1 &533708138
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,8 +766,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 776869086}
   m_LocalRotation: {x: -0, y: -0.7071069, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -146.6, y: 7.9, z: -56.925735}
-  m_LocalScale: {x: 1, y: 15, z: 99.6}
+  m_LocalPosition: {x: -146.6, y: 2.5, z: -56.925735}
+  m_LocalScale: {x: 1, y: 5, z: 99.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -823,8 +859,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872495853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -195.9, y: 7.9, z: -7.5}
-  m_LocalScale: {x: 1, y: 15, z: 100}
+  m_LocalPosition: {x: -195.9, y: 2.5, z: -7.5}
+  m_LocalScale: {x: 1, y: 5, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
@@ -835,19 +871,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 286018164}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &885536718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 885536717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2245c2f675bb427459f1d09be6a37790, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destino: {fileID: 1816160236}
 --- !u!1 &929414141
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +883,7 @@ GameObject:
   - component: {fileID: 929414144}
   - component: {fileID: 929414143}
   - component: {fileID: 929414142}
+  - component: {fileID: 929414146}
   m_Layer: 0
   m_Name: poster Tenoch
   m_TagString: Untagged
@@ -935,12 +959,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929414141}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.04117646, z: 0.0040816288}
+  m_LocalPosition: {x: 0.58, y: 0.04117646, z: 0.0040816288}
   m_LocalScale: {x: 0.2, y: 0.88235295, z: 0.40816325}
   m_Children: []
   m_Father: {fileID: 56256029}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929414146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929414141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60cb26e460ef854ea0e71d566e71672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 885536717}
+  pared: {fileID: 56256025}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,8 +1214,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055847625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -97.01, y: 7.9, z: -7.5}
-  m_LocalScale: {x: 1, y: 15, z: 100}
+  m_LocalPosition: {x: -97.01, y: 2.5, z: -7.5}
+  m_LocalScale: {x: 1, y: 5, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -1287,6 +1325,7 @@ GameObject:
   - component: {fileID: 1159017138}
   - component: {fileID: 1159017137}
   - component: {fileID: 1159017136}
+  - component: {fileID: 1159017140}
   m_Layer: 0
   m_Name: muro con poster 2
   m_TagString: Untagged
@@ -1302,7 +1341,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1159017135}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1369,6 +1408,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1159017140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159017135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb3c4b7dc5045e4899953279beb2589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1344860375
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,6 +1432,7 @@ GameObject:
   - component: {fileID: 1344860378}
   - component: {fileID: 1344860377}
   - component: {fileID: 1344860376}
+  - component: {fileID: 1344860380}
   m_Layer: 0
   m_Name: muro con poster 1
   m_TagString: Untagged
@@ -1396,7 +1448,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344860375}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1463,6 +1515,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1344860380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344860375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb3c4b7dc5045e4899953279beb2589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1354576563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,7 +1615,7 @@ Transform:
   m_GameObject: {fileID: 1354576563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -146.5, y: 0, z: -7.5}
-  m_LocalScale: {x: 100, y: 1, z: 100}
+  m_LocalScale: {x: 100, y: 0.5, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -1660,6 +1724,7 @@ GameObject:
   - component: {fileID: 1452380800}
   - component: {fileID: 1452380799}
   - component: {fileID: 1452380798}
+  - component: {fileID: 1452380802}
   m_Layer: 0
   m_Name: muro con poster 3
   m_TagString: Untagged
@@ -1675,7 +1740,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452380797}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1742,6 +1807,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452380802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452380797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb3c4b7dc5045e4899953279beb2589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1491188209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,8 +2183,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559439630}
   m_LocalRotation: {x: -0, y: -0.7071069, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -146.6, y: 7.9, z: 41.97426}
-  m_LocalScale: {x: 1, y: 15, z: 99.6}
+  m_LocalPosition: {x: -146.6, y: 2.5, z: 41.97426}
+  m_LocalScale: {x: 1, y: 5, z: 99.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
@@ -2217,6 +2294,7 @@ GameObject:
   - component: {fileID: 1645772602}
   - component: {fileID: 1645772601}
   - component: {fileID: 1645772600}
+  - component: {fileID: 1645772604}
   m_Layer: 0
   m_Name: muro con poster 5
   m_TagString: Untagged
@@ -2232,7 +2310,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645772599}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2299,6 +2377,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1645772604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645772599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb3c4b7dc5045e4899953279beb2589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1650965615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2311,6 +2401,7 @@ GameObject:
   - component: {fileID: 1650965618}
   - component: {fileID: 1650965617}
   - component: {fileID: 1650965616}
+  - component: {fileID: 1650965620}
   m_Layer: 0
   m_Name: poster Yalitza
   m_TagString: Untagged
@@ -2392,6 +2483,20 @@ Transform:
   m_Father: {fileID: 1645772603}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1650965620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650965615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60cb26e460ef854ea0e71d566e71672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 885536717}
+  pared: {fileID: 1645772599}
 --- !u!1 &1753109206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,6 +2509,7 @@ GameObject:
   - component: {fileID: 1753109209}
   - component: {fileID: 1753109208}
   - component: {fileID: 1753109207}
+  - component: {fileID: 1753109211}
   m_Layer: 0
   m_Name: Poster Dev
   m_TagString: Untagged
@@ -2479,12 +2585,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753109206}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.45000076, y: 0.04117646, z: 0.0040816288}
+  m_LocalPosition: {x: 0.6, y: 0.04117646, z: 0.0040816288}
   m_LocalScale: {x: 0.2, y: 0.88235295, z: 0.40816325}
   m_Children: []
   m_Father: {fileID: 1452380801}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1753109211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753109206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60cb26e460ef854ea0e71d566e71672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 885536717}
+  pared: {fileID: 1452380797}
 --- !u!1 &1816160235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,13 +2628,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816160235}
-  m_LocalRotation: {x: -0.012373964, y: -0.69331133, z: -0.01309959, w: 0.7204129}
-  m_LocalPosition: {x: 58.83, y: 2.4, z: -6.87}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 58.82, y: 2.09, z: -6.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1880850508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,7 +2662,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880850508}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2621,6 +2741,8 @@ GameObject:
   - component: {fileID: 1895202970}
   - component: {fileID: 1895202969}
   - component: {fileID: 1895202968}
+  - component: {fileID: 1895202972}
+  - component: {fileID: 1895202973}
   m_Layer: 0
   m_Name: Poster Idris
   m_TagString: Untagged
@@ -2696,12 +2818,50 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895202967}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 0.04117646, z: 0.0040816288}
+  m_LocalPosition: {x: 0.63, y: 0.04117646, z: 0.0040816288}
   m_LocalScale: {x: 0.2, y: 0.88235295, z: 0.40816325}
   m_Children: []
   m_Father: {fileID: 1880850512}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895202972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895202967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2245c2f675bb427459f1d09be6a37790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 885536717}
+  pared1: {fileID: 1344860375}
+  pared2: {fileID: 1159017135}
+  pared3: {fileID: 1452380797}
+  pared4: {fileID: 56256025}
+  pared5: {fileID: 1645772599}
+  pared6: {fileID: 1880850508}
+--- !u!114 &1895202973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895202967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffa355ceb99cd0440b589f636d69fffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 885536717}
+  pared1: {fileID: 1344860375}
+  pared2: {fileID: 1159017135}
+  pared3: {fileID: 1452380797}
+  pared4: {fileID: 56256025}
+  pared5: {fileID: 1645772599}
+  pared6: {fileID: 1880850508}
 --- !u!1 &1977879235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,6 +2874,7 @@ GameObject:
   - component: {fileID: 1977879238}
   - component: {fileID: 1977879237}
   - component: {fileID: 1977879236}
+  - component: {fileID: 1977879240}
   m_Layer: 0
   m_Name: poster Hattie
   m_TagString: Untagged
@@ -2795,3 +2956,17 @@ Transform:
   m_Father: {fileID: 1344860379}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1977879240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1977879235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60cb26e460ef854ea0e71d566e71672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jugador: {fileID: 885536717}
+  pared: {fileID: 1344860375}
