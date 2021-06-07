@@ -2,17 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class Regresa : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform destino;
+    void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.name.Equals ("ultima"))
+        {
+            transform.position = destino.position;
+            transform.rotation = destino.rotation;
+        }
     }
 }
