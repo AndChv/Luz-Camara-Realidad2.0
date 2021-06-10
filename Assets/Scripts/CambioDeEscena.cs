@@ -14,7 +14,7 @@ public class CambioDeEscena : MonoBehaviour
     void Start()
     {
         score = 0;
-        timeLeft = 180f; 
+        timeLeft = 10f; 
 
     }
 

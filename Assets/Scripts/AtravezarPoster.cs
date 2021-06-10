@@ -8,10 +8,12 @@ public class AtravezarPoster : MonoBehaviour
     public GameObject pared;
     CharacterController controlJugador;
     Collider colliderPared;
+    videos apagarVideos;
     private void Start()
     {
         controlJugador = jugador.GetComponent<CharacterController>();
         colliderPared = pared.GetComponent<Collider>();
+        apagarVideos = GetComponent<videos>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -19,7 +21,8 @@ public class AtravezarPoster : MonoBehaviour
         {
             Debug.Log("entra");
             colliderPared.isTrigger = true;
-            //controlJugador.Move(new Vector3(-2, 0, 0));
+            apagarVideos.Apaga();
         }
+
     }
 }
